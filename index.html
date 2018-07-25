@@ -1,805 +1,614 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Animation</title>
-
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+<title>MY PAGE</title>
+</head>
 <style>
-html{
-	background: black;
 
+
+body
+{
+   
+    font-family: Georgia;
+   
 }
-.box{
 
-	position: relative;
-    width: 1250px;
-    height: 1398px;
-    background: black;
-   margin-right: 10%;
-   margin-left:15%;
-   border: 3px solid white;
+.mainbox{
+	position: absolute;
+    height: 100%;
+    width:60%;
+    background:#ffefd5;
+    top: 0;
+    left: 18%;
+  
+}
+
+.box{
+	position: absolute;
+    height: 100%;
+    width:97%;
+    background:#ffefd5;
+    top: 0%;
+    left: 1.5%;
+  
+}
+
+.header{
+	position: absolute;
+   
+    background:none;
+    width: 100%;
+    height: 10%;
+    
+   
+    border-bottom: 2px solid #760001;
+   
    
 
 
 }
-.top{
+
+
+.flags img{
+position: relative;
+
+  margin-top:0%;
+left:88%;
+	height: 0.8%;
+    width:2%;
+padding: 0.5%;
+ 
+
+}
+
+
+
+nav{
 	position: absolute;
-    width: 1250px;
-    height: 500px;
-    background: #DCDCDC;
-   margin-right: 0;
-   margin-left:0;
+	top: 20%;
+	left:62%;
+	padding:10px;
+    display: inline-block;
+     
+    
+    
+   
+    
+    
+    
+    
+}
+
+nav a:hover{
+	color: #760001;
+    border-bottom: 3px solid #760001;
+
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+   
+   
+     
+   
+   
+}
+
+li {
+	position: relative;
+    float: right;
+    margin-top:9%;
+    
+     
+     
+}
+
+li a {
+    
+    display: block;
+    padding: 8px;
+    text-decoration: none;
+    color: black;
+    
+   
+    
+}
+@keyframes box {
+  0 {
+    transform: translateX(-50%) translateY(-50%) rotate(0deg);
+  }
+  100% {
+    transform: translateX(-50%) translateY(-50%) rotate(360deg);
+  }
+}
+
+
+.rotate {
+  color: black;
+  text-shadow: 0 20px 25px #2e2e31, 0 40px 60px #2e2e31;
+  font-size: 150%;
+  font-weight: bold;
+  text-decoration: none;
+  letter-spacing: -3px;
+  
+  position: absolute;
+  top: 50%;
+  left: 9%;
+  transform: translateX(-50%) translateY(-50%);
+  
+  
+  
+   
+    font-family: BallparkWeiner;
+
+  
+  
+  
+}
+
+.rotate:before,
+.rotate:after {
+  content: '';
+  padding: .9em .4em;
+  position: absolute;
+  left: 50%;
+  width: 100%;
+  top: 50%;
+  display: block;
+  border: 3px solid #760001;
+  transform: translateX(-50%) translateY(-50%) rotate(0deg);
+  animation: 10s infinite alternate ease-in-out box;
+}
+
+
+
+.center { 
+    height: 25%;
+    width:100%;
+    position: absolute;
+    border: 3px solid none; 
+    top:14%;
+}
+
+.center img {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    border-radius:5px;
+     box-shadow: 0px 4px 4px #1c1a19;
+   
+    position: absolute;
+    top: 47%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+#description
+{
+    position: absolute;
+   top: 33.2%;
+    border-radius: 0px 0px 5px 5px;
+    width: 99.5%;
+    height: 33px;
+    padding-top: 15px;
+    padding-left: 4px;
+    
+    color: white;
+    font-size: 1.5em;
+    opacity: 0.7;
+    animation:type 4s steps(32) ;
+    overflow:hidden;
+    white-space:nowrap;
+    
+}
+@keyframes type{
+	0%{width:0ch;}
+	100%{width:22ch;}
+
+}
+
+.coverletter{
+	position: absolute;
+    height: 50%;
+    width:60%;
+    background:#ffefd5;
+    top: 40%;
+    left: 2%;
+    border: 1px solid none;
+    
+      line-height: 200%;
+
+
+
+}
+.coverletter p{
+	position: absoulte;
+    top: 5%;
+    text-indent: 50px;
+    text-align: justify;
+
+
+}
+.mypic{
+	position: absolute;
+    height: 50%;
+    width:36%;
+    background:#696969;
+    top: 40%;
+    right:1%;
+     border: 1px solid none;
+     border-radius: 5px;
 
 
 
 }
 
-.photobox{
-	position: absolute;
-    width:1250px;
-    height: 300px;
-    background: white;
-    top:5%;
+.mypic p{
+
+	position: relative;
+	color: white;
+	top: 70%;
+	left: 25%;
+display: inline-block;
+line-height: 200%;
+font-family: ballpark weiner;
+font-size: 100%;
 
 }
 
 img{
 	position:absolute;
 	display:inline-block;
-    left:42%;
+    left:17%;
     top:3%;
-    width:15%;
-    border-radius:50%;
-
-}
-
-.nametop{
-	position: absolute;
-    color: black;
-    font: veradana;
-    font-size: 40px;
-    top: 55%;
-    left: 40%;
+    width:68%;
+    border-radius:5px;
 
 
 }
-
-.desg{
-	position: absolute;
-    color: black;
-    font: veradana;
-    font-size: 20px;
-    top: 78%;
-    left: 43%;
+#a{
+	position:absolute;
+	display:inline-block;
+    left:5%;
+    top:83%;
+    width:18%;
+    border-radius:0px;
 
 
 }
-
-.about{
+.footer{
 	position: absolute;
-    color: black;
-    font: veradana;
-    font-size: 20px;
-    top: 65%;
+    bottom:0;
+    background:none;
+    width: 98%;
+    height: 9%;
+left: 1%;
+
+    
+   
+    border-top: 1.5px solid #760001;
+   
+   
+
+
+}
+.adress{
+	position:absolute;
+    top: 8%;
     left: 10%;
+    line-height: 200%;
+    
 
 
 }
-.contact{
-	position: absolute;
-    color: blacke;
-    font: veradana;
-    font-size: 20px;
-    top: 65%;
-    left: 64%;
+.phone{
+	position:absolute;
+    left: 65%;
+    top: 8%;
+    
 
 
 }
-.aboutme{
-	position: absolute;
-    color: black;
-    font: veradana;
-    font-size: 20px;
-    top: 72%;
-    left: 10%;
-
-
-}
-
-.contactme{
-	position: absolute;
-    color: black;
-    font: veradana;
-    font-size: 20px;
-    top: 72%;
-    left: 64%;
-
-
-}
-.bottom{
-	position: absolute;
-    width: 1250px;
-    height: 900px;
-    background: white;
-   margin-right: 0;
-   margin-left:0;
-   top: 35.6%;
-
-
-
-}
-.Professionalexperience{
-	position: absolute;
-    color: black;
-    font: veradana;
-    font-size: 20px;
-    top: 10%;
-    left: 10%;
-
-
-}
-
-.Certificates{
-	position: absolute;
-    color: black;
-    font: veradana;
-    font-size: 20px;
-    top: 10%;
-    left: 64%;
-
-
-}
-.tntyear{
-	position: absolute;
-    color: black;
-    font: veradana;
-    font-size: 20px;
-    top: 16%;
-    left: 10%;
-	text-decoration: none;
-
-
-}
-.tnt{
-	position: absolute;
-    color: black;
-    font: veradana;
-    font-size: 20px;
-    top: 16%;
-    left: 25%;
-	text-decoration: none;
-
-
-}
-.clearwayyear{
-	position: absolute;
-    color: black;
-    font: veradana;
-    font-size: 20px;
-    top: 20%;
-    left: 10%;
-	text-decoration: none;
-
-
-}
-.clearway{
-	position: absolute;
-    color: black;
-    font: veradana;
-    font-size: 20px;
-    top: 20%;
-    left: 25%;
-	text-decoration: none;
-
-
-}
-
-.crystalsyear{
-	position: absolute;
-    color: black;
-    font: veradana;
-    font-size: 20px;
-    top: 24%;
-    left: 10%;
-	text-decoration: none;
-
-
-}
-.crystals{
-	position: absolute;
-    color: black;
-    font: veradana;
-    font-size: 20px;
-    top: 24%;
-    left: 25%;
-	text-decoration: none;
-
-
-}
-
-.ISTQByear{
-	position: absolute;
-    color: black;
-    font: veradana;
-    font-size: 20px;
-    top: 20%;
-    left: 64%;
-
-
-}
-.ISTQB{
-	position: absolute;
-    color: black;
-    font: veradana;
-    font-size: 20px;
-    top: 20%;
-    left: 72%;
-	
-
-
-}
-
-.testingyear{
-	position: absolute;
-    color: black;
-    font: veradana;
-    font-size: 20px;
-    top: 24%;
-    left: 64%;
-
-
-}
-.testing{
-	position: absolute;
-    color: black;
-    font: veradana;
-    font-size: 20px;
-    top: 24%;
-    left: 72%;
-	
-
-
-}
-
-
-
-
-.javascriptyear{
-	position: absolute;
-    color: black;
-    font: veradana;
-    font-size: 20px;
-    top: 16%;
-    left: 64%;
-
-
-}
-.javascript{
-	position: absolute;
-    color: black;
-    font: veradana;
-    font-size: 20px;
-    top: 16%;
-    left: 72%;
-	
-
-
-}
-
-
-
-.education{
-	position: absolute;
-    color: black;
-    font: veradana;
-    font-size: 20px;
-    top: 34%;
-    left: 10%;
-
-
-}
-
-.skills{
-	position: absolute;
-    color: black;
-    font: veradana;
-    font-size: 20px;
-    top: 34%;
-    left: 64%;
-
-
-}
-
-
-.mcayear{
-	position: absolute;
-    color: black;
-    font: veradana;
-    font-size: 20px;
+.email{
+	position:absolute;
+    left: 65%;
     top: 40%;
-    left: 10%;
-	text-decoration: none;
-
-
-}
-.mca{
-	position: absolute;
-    color: black;
-    font: veradana;
-    font-size: 20px;
-    top: 40%;
-    left: 25%;
-	text-decoration: none;
+    
 
 
 }
 
 
-.icetyear{
-	position: absolute;
-    color: black;
-    font: veradana;
-    font-size: 20px;
-    top: 44%;
-    left: 10%;
-	text-decoration: none;
 
 
-}
-.icet{
-	position: absolute;
-    color: black;
-    font: veradana;
-    font-size: 20px;
-    top: 44%;
-    left: 25%;
-	text-decoration: none;
-
-
-}
-.bscyear{
-	position: absolute;
-    color: black;
-    font: veradana;
-    font-size: 20px;
-    top: 48%;
-    left: 10%;
-	text-decoration: none;
-
-
-}
-.bsc{
-	position: absolute;
-    color: black;
-    font: veradana;
-    font-size: 20px;
-    top: 48%;
-    left: 25%;
-	text-decoration: none;
-
-
-}
-
-.highyear{
-	position: absolute;
-    color: black;
-    font: veradana;
-    font-size: 20px;
-    top: 52%;
-    left: 10%;
-	text-decoration: none;
-
-
-}
-.high{
-	position: absolute;
-    color: black;
-    font: veradana;
-    font-size: 20px;
-    top: 52%;
-    left: 25%;
-	text-decoration: none;
-
-
-}
-
-.elementaryyear{
-	position: absolute;
-    color: black;
-    font: veradana;
-    font-size: 20px;
-    top: 56%;
-    left: 10%;
-	text-decoration: none;
-
-
-}
-.elementary{
-	position: absolute;
-    color: black;
-    font: veradana;
-    font-size: 20px;
-    top: 56%;
-    left: 25%;
-	text-decoration: none;
-
-
+.fa {
+  padding: 50px;
+  font-size: 30px;
+  width: 3%;
+  height: 4%;
+  text-align: center;
+  text-decoration: none;
+  
+  
 }
 
 
-.qtp{
-	position: absolute;
-    color: black;
-    font: veradana;
-    font-size: 20px;
-    top: 40%;
-    left: 64%;
-	
 
 
+
+
+.fa-linkedin {
+  background: none;
+  color: white;
+   border-radius:5%;
+   position: absolute;
+  bottom: 0%;
+  left: -55%;
+}
+.fa-linkedin:hover {
+   
+    color:#0077b5;
 }
 
-
-.programming{
-	position: absolute;
-    color: black;
-    font: veradana;
-    font-size: 20px;
-    top: 44%;
-    left: 64%;
-	
-
-
-}
-
-.msoffice{
-	position: absolute;
-    color: black;
-    font: veradana;
-    font-size: 20px;
-    top: 48%;
-    left: 64%;
-	
-
-
-}
-.languages{
-	position: absolute;
-    color: black;
-    font: veradana;
-    font-size: 20px;
-    top: 52%;
-    left: 64%;
-	
-
-
-}
-
-.hobbies{
-	position: absolute;
-    color: black;
-    font: veradana;
-    font-size: 20px;
-    top: 64%;
-    left: 10%;
-
-}
-.badminton{
-	position: absolute;
-    color: black;
-    font: veradana;
-    font-size: 20px;
-    top: 70%;
-    left: 10%;
-
-}
-
-
-.personaldetails{
-	position: absolute;
-    color: black;
-    font: veradana;
-    font-size: 20px;
-    top: 64%;
-    left: 64%;
-
-}
-
-.name{
-	position: absolute;
-    color: black;
-    font: veradana;
-    font-size: 20px;
-    top: 70%;
-    left: 64%;
-
-}
-
-.dob{
-	position: absolute;
-    color: black;
-    font: veradana;
-    font-size: 20px;
-    top: 74%;
-    left: 64%;
-
-}
-
-.married{
-	position: absolute;
-    color: black;
-    font: veradana;
-    font-size: 20px;
-    top: 78%;
-    left: 64%;
-
-}
-.child{
-	position: absolute;
-    color: black;
-    font: veradana;
-    font-size: 20px;
-    top: 82%;
-    left: 64%;
-
-}
-.visa{
-	position: absolute;
-    color: black;
-    font: veradana;
-    font-size: 20px;
-    top: 86%;
-    left: 64%;
-
-}
-.nav{
-	overflow: hidden;
-  background-color: #DCDCDC;
+.fa-skype {
+  background: none;
+  color:white;
+  border-radius:5%;
   position: absolute;
-  bottom: 0;
-  width: 100%;
-  height:5%;
+  bottom: 0%;
+  left: -35%;
+}
+.fa-skype:hover {
+   
+    color: #00aff0;
+}
+
+
+.fa-xing{
+  background: none;
+  color: white;
+  border-radius:5%;
+  position: absolute;
+  bottom: 0%;
+  left: -15%;
+}
+.fa-xing:hover {
+    opacity: 0.7;
+    color: #026466;
+}
+button{
+	position:absolute;
+    padding:5%;
+    border: white;
+    background:none;
+    font-size:10px;
+    color:white;
+    top:20%;
+    cursor:pointer;
 
 
 
 }
+.next{
+position:absolute;
+border-radius:10px 0px 0px 10px;
+right:0%;
+top:30%;
 
 
-.btn-linkedin {
-	display: inline-block;
-    background: #DCDCDC; 
-   
-    color: #084461;
-    padding: 0px 5px 3px;
-    border-radius: 3px;
-    border: 1px solid none;
-    font-size: 30px;
-    position: absolute;
-   bottom:0;
-    left:50%;
-	}
-	.btn-linkedin:link, .btn-linkedin:visited {
-	  color:#084461;
-	}
-	.btn-linkedin:active, .btn-linkedin:hover {
-	  background: none;
-	  color:#084461;
-	}
+}
+.prew{
+position:absolute;
+border-radius:0px 10px 10px 0px;
+left:-2%;
+top:30%;
+
+}
+ 
+ li a.active {
+    color: brown;
+}
+ 
 
 
-	.btn-xing {
-    display: inline-block;
-    background: #DCDCDC; 
-    
-    color: #084461;
-    padding: 0px 5px 3px;
-    border-radius: 3px;
-    border: 1px solid none;
-    font-size: 30px;
-    position: absolute;
-   bottom:0;
-    left:46%;
-	}
-	.btn-xing:link, .btn-xing:visited {
-	  color: #084461;
-	}
-	.btn-xing:active, .btn-xing:hover {
-	  background: none;
-	  color:#084461;
-	}   
-    
-    
-    
-    
-    .btn-facebook {
-    display: inline-block;
-    background: #DCDCDC; 
-   
-    color: #084461;
-    padding: 0px 9px 2px;
-    border-radius: 3px;
-    border: 1px solid none;
-    font-size: 34px;
-    position: absolute;
-   bottom:0;
-    left:41.8%;
-	}
-	.btn-facebook:link, .btn-facebookg:visited {
-	   
-      color:#084461;
-	}
-	.btn-facebook:active, .btn-facebook:hover {
-	  background: none;
-	  color:#084461;
-	}
-    
-     .pdf {
-    display: inline-block;
-    background: #DCDCDC; 
-   
-    color: #084461;
-    padding: 0px 9px 2px;
-    border-radius: 3px;
-    border: 1px solid none;
-    font-size: 34px;
-    position: absolute;
-   bottom:0;
-    left:70%;
-	}
-	.pdf:link, .pdf:visited {
-	   
-      color:#084461;
-	}
-	.pdf:active, .pdf:hover {
-	  background: none;
-	  color:#084461;
-	}
-    
+body *,
+html * {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
 
+body {
+  overflow: hidden;
+}
 
+.full {
+  position: absolute;
+  
+  height: auto;
+  top: 50%;
+  bottom: 0;
+  left: 50%;
+  right: 0;
+  margin: auto;
+  display: block;
+  
+}
 
-
-.button {
-    background-color: none;
-    border: none;
-    color: black;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 100%;
-    margin: 4px 2px;
-    cursor: pointer;
-position: absolute;
-top:-3%;
+.zoom {
+  animation: scale 8s ease-in-out infinite;
+}
+  
+@keyframes scale {
+  50% {
+    -webkit-transform:scale(1.1);
+    -moz-transform:scale(1.1);
+    -ms-transform:scale(1.1);
+    -o-transform:scale(1.1);
+    transform:scale(1.1);
+  }
 }
 
 
 
 </style>
-
-</head>
 <body>
-
+<div class="mainbox">
 <div class="box">
+<div class="header">
+<div class="flags">
+  <a class="active" href="Homeenglish.html" title="English"><img src="https://cdn3.iconfinder.com/data/icons/finalflags/128/United-States-Flag.png" /></a>
+   
+    <a href="Homegerman.html" title="German"><img src="https://cdn3.iconfinder.com/data/icons/finalflags/128/Germany-Flag.png" /></a>
+</div>
 
-<div class="top">
 
-<a href="Homegerman.html" class="button">HOME</a>
 
-<div class="photobox">
 
-<img src="https://scontent-ams3-1.xx.fbcdn.net/v/t1.0-9/36225541_1748627431895871_8492717311470338048_n.jpg?_nc_cat=0&_nc_eui2=AeFPZq8AnTJsDffLs53qTrZKxwTDd7-teYPdqlOXPYLLpnkEEiINkakGZukTwNB_quy62KtN86QptQJvcXZgQLmo2tmBHSBR1kb5LWvkem2h7A&oh=fd255db099a5ddd5ef8913c39d8479c8&oe=5BB0FA0C" alt="pic">
+<div class="rotate">DIVYA MALLINI</div>
 
-<p class="nametop">Divya Mallini</p>
-<p class="desg">Frontend Developer</p>
+
+<nav>
+<ul>
+	<li><a href="contact.html">CONTACT</a></li>
+  
+  <li><a href="certificates.html">CERTIFICATES</a></li>
+  <li><a href="Resume.html">RESUME</a></li>
+
+  <li><a class="active" href="Homeenglish.html">HOME</a></li>
+  
+</ul>
+
+</nav>
+
+</div>
+
+<div class="center">
+ 
+
+
+
+
+	<div id="box">
+    	<img src="https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/taj-mahal-tayseer-al-hamad.jpg">
+        </div>
+        
+        <button class="prew fa fa-chevron-left" onclick="prewImage()"></button>
+        <button class="next fa fa-chevron-right" onclick="nextImage()"></button>
+        
+        
+        
+        </div>
+
+
+<script type="text/javascript">
+	var slider_content = document.getElementById('box');
+    var image=['https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/The_Monastery%2C_Petra%2C_Jordan8.jpg/1920px-The_Monastery%2C_Petra%2C_Jordan8', 
+    'http://muc1.framepool.com/shotimg/970887571-piazza-dei-miracoli-leaning-tower-of-pisa-santa-maria-assunta-romanesque',
+    'https://images.fineartamerica.com/images-medium-large/rome--colosseum-manolo-raggi',
+    'https://gazettereview.com/wp-content/uploads/2017/04/pyramids', 
+    'https://thumbs.dreamstime.com/b/corcovado-christus-der-erl%C3%B6ser-blaue-himmel-horizontal-32237350', 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Chichen-Itza-Castillo-Seen-From-East.JPG/1280px-Chichen-Itza-Castillo-Seen-From-East','https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/taj-mahal-tayseer-al-hamad'];
+	var i=image.length;
+   
+   function nextImage(){
+    	if (i<image.length){
+        i= i+1;
+        }else{
+        	i= 1;
+        }
+    	slider_content.innerHTML="<img src="+image[i-1]+".jpg>";
+    
+    }
+     function prewImage(){
+    	if (i<image.length+1 && i>1){
+        i= i-1;
+        }else{
+        	i= image.length;
+        }
+    	slider_content.innerHTML="<img src="+image[i-1]+".jpg>";
+    
+    }
+setInterval(nextImage, 5000);
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+<div id="description">
+Seven Wonders of the World ..
+</div>
 
 
 </div>
-<h2 class="about">ABOUT</h2>
-<p class="aboutme">write about my self</p>
 
+<div class="coverletter">
 
-<h2 class="contact">KONTAKT
-</h2>
-<p class="contactme"> 
-	Hellinghaeuser Weg 2A, 59557 Lippstadt <br>
-	Phone : 017684943779  <br>
-	Email : divya.mallini@gmx.de
+<strong>Dear Hiring Manager,</strong><br>
+<p>
+ I am writing to express my interest for the position of QA Engineer. Along with Master's degree in computer applications I have more than one year of project experience . The key strengths that I possess for success in the position include:<br>
+ <br> Extensive experience in performing Functional und Regression testing.
+ <br> Experience in Agile Development process (Scrum Methodologies).
+  <br> Excellent knowledge in bug life cycle and test case design.
+<br>Good experience on bug tracking tool and good knowledge on test management tool.
+<br>Knowledge and experience in MY SQL server.
+<br>Excellent English language skills and B1 level German knowledge.
 
+<br>
+<p>
+Thank you very much for your time and consideration. I look forward to speaking with you about this employment opportunity.
 </p>
 
 
-
 </div>
-<div class="bottom">
-<h2 class="Professionalexperience">PROFESSIONAL EXPERIENCE</h2>
-<h2 class="Certificates">CERTIFICATES</h2>
-<p class="tntyear">06.2015 to 12.2015</p>
-<p class="tnt">Data Entry Clerk at TNT Express GmbH, Berlin</p>
+<div class="mypic">
+<img src="https://scontent-ams3-1.xx.fbcdn.net/v/t1.0-9/36225541_1748627431895871_8492717311470338048_n.jpg?_nc_cat=0&oh=865bac6ce3bf674ff6fea9e26a9e976d&oe=5BD8870C">
 
-<p class="clearwayyear">12.2011 to 06.2012</p>
-<p class="clearway">Software Tester at Clearway Technology, India</p>
+<p>NAME : DIVYA MALLINI <br>
+   DOB : 02.06.1987
+</p>
 
-<p class="crystalsyear">05.2011 to 11.2011</p>
-<p class="crystals">Software Tester at Crystals Software, India</p>
-
-<p class="ISTQByear">10.2015</p>
-<p class="ISTQB">ISTQB Foundation Level, Berlin</p>
+<div class="full zoom" >
 
 
-<p class="testingyear">04.2011</p>
-<p class="testing">Testing Tools, India</p>
+<a href="#" class="fa fa-linkedin"></a>
 
-<p class="javascriptyear">01.2017</p>
-<p class="javascript">JavaScript, India</p>
-
-
-<h2 class="education">EDUCATION</h2>
-<h2 class="skills">SKILLS</h2>
-
-<p class="mcayear">06.2008 to 03.2011</p>
-<p class="mca">Master of Computer Applications, India</p>
-
-<p class="icetyear">04.2007 to 05.2008</p>
-<p class="icet">Training for the competitive test (ICET), India</p>
-
-<p class="bscyear">06.2004 to 03.2007</p>
-<p class="bsc">Bachelor of Computer Science, India</p>
-
-<p class="highyear">06.2002 to 03.2004</p>
-<p class="high">High School, India</p>
-
-<p class="elementaryyear">06.1992 to 03.2002</p>
-<p class="elementary">Elementary School, India</p>
-
-
-<p class="qtp"> Quick Test Professional (Basic knowledge) </p>
-
-
-<p class="programming"> Bugzilla, QC 9.2, C, .NET, HTML, JavaScript, CSS</p>
-
-<p class="msoffice">  MS excel, MS word, MS power point and MS outlook</p>
-<p class="languages">   English (Business fluent), German (B1), Telugu (Mother tongue)</p>
-
-
-<h2 class="hobbies">INTERESTS</h2>
-<h2 class="personaldetails">PERSONAL DETAILS</h2>
-
-<p class="badminton"> Badminton, Table tennis</p>
-
-
-<p class="name"> Name : Divya Mallini </p>
-
-<p class="dob"> Date of birth : 02-06-1987 </p>
-<p class="married"> Marital Status : Married </p>
-<p class="child"> Children : one </p>
-<p class="visa"> Visa Type : Permanent residence with work permit</p>
-
-
-
-<div class="nav">
-
-<a href="https://www.linkedin.com/in/mallini-divya-istqb-certified-tester-94abb947" title="LinkedIn" class="btn btn-linkedin btn-lg"><i class="fa fa-linkedin"></i></a>
-
-<a href="https://www.xing.com/" title="Xing" class="btn btn-xing btn-lg"><i class="fa fa-xing"></i></a>
-<a href="https://www.facebook.com/" title="Facebook" class="btn btn-facebook btn-lg"><i class="fa fa-facebook"></i></a>
-<a href="#" title="Certificates" class="pdf"><i class="fa fa-file-pdf-o"></i></a>
-
-
+<a href="#" class="fa fa-skype"></a>
+<a href="#" class="fa fa-xing"></a>
+</div>
 </div>
 
+
+<div class="footer">
+<div class="adress">Hellinghaueser Weg 2A <br>
+59557 Lippstadt 
+Germany
+
+</div>
+<div class="phone">Phone : 017684943779 
+
+</div>
+<div class="email">Email : divya.mallini@gmx.de</div>
 
 
 
 </div>
-
-
-
-</div>
+  </div>            
 </body>
 </html>
+
+
+
