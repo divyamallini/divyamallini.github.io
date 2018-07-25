@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<title>MY PAGE</title>
+</head>
+<style>
+
+
+body
+{
+   
+    font-family: Georgia;
+   
+}
+
+.mainbox{
+	position: absolute;
+    height: 100%;
+    width:60%;
+    background:#ffefd5;
+    top: 0;
+    left: 18%;
+  
+}
+
+.box{
+	position: absolute;
+    height: 100%;
+    width:97%;
+    background:#ffefd5;
+    top: 0%;
+    left: 1.5%;
+  
+}
+
+.header{
+	position: absolute;
+   
+    background:none;
+    width: 100%;
+    height: 10%;
+    
+   
+    border-bottom: 2px solid #760001;
+   
+   
+
+
+}
+
+
+.flags img{
+position: relative;
+
+  margin-top:0%;
+left:88%;
+	height: 0.8%;
+    width:2%;
+padding: 0.5%;
+ 
+
+}
+
+
+nav{
+	position: absolute;
+	top: 20%;
+	left:62%;
+	padding:10px;
+    display: inline-block;
+     
+    
+    
+   
+    
+    
+    
+    
+}
+
+nav a:hover{
+	color: #760001;
+    border-bottom: 3px solid #760001;
+
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+   
+   
+     
+   
+   
+}
+
+li {
+	position: relative;
+    float: right;
+    margin-top:9%;
+    
+     
+     
+}
+
+li a {
+    
+    display: block;
+    padding: 8px;
+    text-decoration: none;
+    color: black;
+    
+   
+    
+}
+@keyframes box {
+  0 {
+    transform: translateX(-50%) translateY(-50%) rotate(0deg);
+  }
+  100% {
+    transform: translateX(-50%) translateY(-50%) rotate(360deg);
+  }
+}
+
+
+.rotate {
+  color: black;
+  text-shadow: 0 20px 25px #2e2e31, 0 40px 60px #2e2e31;
+  font-size: 150%;
+  font-weight: bold;
+  text-decoration: none;
+  letter-spacing: -3px;
+  
+  position: absolute;
+  top: 50%;
+  left: 9%;
+  transform: translateX(-50%) translateY(-50%);
+  
+  
+  
+   
+    font-family: BallparkWeiner;
+
+  
+  
+  
+}
+
+.rotate:before,
+.rotate:after {
+  content: '';
+  padding: .9em .4em;
+  position: absolute;
+  left: 50%;
+  width: 100%;
+  top: 50%;
+  display: block;
+  border: 3px solid #760001;
+  transform: translateX(-50%) translateY(-50%) rotate(0deg);
+  animation: 10s infinite alternate ease-in-out box;
+}
+
+
+.designation{
+	position: absolute;
+    top: 48%;
+    left: 8%;
+    font-family: Dayrom, serif;
+
+}
+.center { 
+    height: 25%;
+    width:100%;
+    position: absolute;
+    border: 3px solid none; 
+    top:14%;
+}
+
+.center img {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    border-radius:5px;
+     box-shadow: 0px 4px 4px #1c1a19;
+   
+    position: absolute;
+    top: 47%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+#description
+{
+    position: absolute;
+   top: 33.2%;
+    border-radius: 0px 0px 5px 5px;
+    width: 99.5%;
+    height: 33px;
+    padding-top: 15px;
+    padding-left: 4px;
+    
+    color: white;
+    font-size: 1.5em;
+    opacity: 0.7;
+    animation:type 4s steps(32) ;
+    overflow:hidden;
+    white-space:nowrap;
+    
+}
+@keyframes type{
+	0%{width:0ch;}
+	100%{width:22ch;}
+
+}
+
+.coverletter{
+	position: absolute;
+    height: 50%;
+    width:60%;
+    background:#ffefd5;
+    top: 40%;
+    left: 2%;
+    border: 1px solid none;
+    
+      line-height: 200%;
+
+
+
+}
+.coverletter p{
+	position: absoulte;
+    top: 5%;
+    text-indent: 50px;
+    text-align: justify;
+
+
+}
+.mypic{
+	position: absolute;
+    height: 50%;
+    width:36%;
+    background:#696969;
+    top: 40%;
+    right:1%;
+     border: 1px solid none;
+     border-radius: 5px;
+
+
+
+}
+
+.mypic p{
+
+	position: relative;
+	color: white;
+	top: 70%;
+	left: 25%;
+display: inline-block;
+line-height: 200%;
+font-family: ballpark weiner;
+font-size: 100%;
+
+}
+
+img{
+	position:absolute;
+	display:inline-block;
+    left:17%;
+    top:3%;
+    width:68%;
+    border-radius:5px;
+
+
+}
+#a{
+	position:absolute;
+	display:inline-block;
+    left:5%;
+    top:83%;
+    width:18%;
+    border-radius:0px;
+
+
+}
+.footer{
+	position: absolute;
+    bottom:0;
+    background:none;
+    width: 98%;
+    height: 9%;
+left: 1%;
+
+    
+   
+    border-top: 1.5px solid #760001;
+   
+   
+
+
+}
+.adress{
+	position:absolute;
+    top: 8%;
+    left: 10%;
+    line-height: 200%;
+    
+
+
+}
+.phone{
+	position:absolute;
+    left: 65%;
+    top: 8%;
+    
+
+
+}
+.email{
+	position:absolute;
+    left: 65%;
+    top: 40%;
+    
+
+
+}
+
+
+
+
+.fa {
+  padding: 50px;
+  font-size: 30px;
+  width: 3%;
+  height: 4%;
+  text-align: center;
+  text-decoration: none;
+  
+  
+}
+
+
+
+
+
+
+.fa-linkedin {
+  background: none;
+  color: white;
+   border-radius:5%;
+   position: absolute;
+  bottom: 0%;
+  left: -55%;
+}
+.fa-linkedin:hover {
+   
+    color:#0077b5;
+}
+
+.fa-skype {
+  background: none;
+  color:white;
+  border-radius:5%;
+  position: absolute;
+  bottom: 0%;
+  left: -35%;
+}
+.fa-skype:hover {
+   
+    color: #00aff0;
+}
+
+
+.fa-xing{
+  background: none;
+  color: white;
+  border-radius:5%;
+  position: absolute;
+  bottom: 0%;
+  left: -15%;
+}
+.fa-xing:hover {
+    opacity: 0.7;
+    color: #026466;
+}
+button{
+	position:absolute;
+    padding:5%;
+    border: white;
+    background:none;
+    font-size:10px;
+    color:white;
+    top:20%;
+    cursor:pointer;
+
+
+
+}
+.next{
+position:absolute;
+border-radius:10px 0px 0px 10px;
+right:0%;
+top:30%;
+
+
+}
+.prew{
+position:absolute;
+border-radius:0px 10px 10px 0px;
+left:-2%;
+top:30%;
+
+}
+ 
+ li a.active {
+    color: brown;
+}
+ 
+
+
+body *,
+html * {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+body {
+  overflow: hidden;
+}
+
+.full {
+  position: absolute;
+  
+  height: auto;
+  top: 50%;
+  bottom: 0;
+  left: 50%;
+  right: 0;
+  margin: auto;
+  display: block;
+  
+}
+
+.zoom {
+  animation: scale 8s ease-in-out infinite;
+}
+  
+@keyframes scale {
+  50% {
+    -webkit-transform:scale(1.1);
+    -moz-transform:scale(1.1);
+    -ms-transform:scale(1.1);
+    -o-transform:scale(1.1);
+    transform:scale(1.1);
+  }
+}
+
+
+
+
+</style>
+<body>
+<div class="mainbox">
+<div class="box">
+<div class="header">
+<div class="flags">
+  <a href="index.html" title="Englisch"><img src="https://cdn3.iconfinder.com/data/icons/finalflags/128/United-States-Flag.png" /></a>
+   
+    <a class="active" href="Homegerman.html" title="Deutsch"><img src="https://cdn3.iconfinder.com/data/icons/finalflags/128/Germany-Flag.png" /></a>
+</div>
+
+
+
+<div class="rotate">DIVYA MALLINI</div>
+
+<nav>
+<ul>
+	<li><a href="kontakt.html">KONTAKT</a></li>
+  	<li><a href="Zeugnisse.html">ZEUGNISSE</a></li>
+  
+  <li><a href="lebenslauf.html">LEBENSLAUF</a></li>
+  
+  <li><a class="active" href="Homegerman.html">HOME</a></li>
+  
+</ul>
+
+</nav>
+
+</div>
+
+<div class="center">
+ 
+
+
+
+
+	<div id="box">
+    	<img src="https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/taj-mahal-tayseer-al-hamad.jpg">
+        </div>
+        
+        <button class="prew fa fa-chevron-left" onclick="prewImage()"></button>
+        <button class="next fa fa-chevron-right" onclick="nextImage()"></button>
+        
+        
+        
+        </div>
+
+
+<script type="text/javascript">
+	var slider_content = document.getElementById('box');
+    var image=['https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/The_Monastery%2C_Petra%2C_Jordan8.jpg/1920px-The_Monastery%2C_Petra%2C_Jordan8', 
+    'http://muc1.framepool.com/shotimg/970887571-piazza-dei-miracoli-leaning-tower-of-pisa-santa-maria-assunta-romanesque',
+    'https://images.fineartamerica.com/images-medium-large/rome--colosseum-manolo-raggi',
+    'https://gazettereview.com/wp-content/uploads/2017/04/pyramids', 
+    'https://thumbs.dreamstime.com/b/corcovado-christus-der-erl%C3%B6ser-blaue-himmel-horizontal-32237350', 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Chichen-Itza-Castillo-Seen-From-East.JPG/1280px-Chichen-Itza-Castillo-Seen-From-East','https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/taj-mahal-tayseer-al-hamad'];
+	var i=image.length;
+   
+   function nextImage(){
+    	if (i<image.length){
+        i= i+1;
+        }else{
+        	i= 1;
+        }
+    	slider_content.innerHTML="<img src="+image[i-1]+".jpg>";
+    
+    }
+     function prewImage(){
+    	if (i<image.length+1 && i>1){
+        i= i-1;
+        }else{
+        	i= image.length;
+        }
+    	slider_content.innerHTML="<img src="+image[i-1]+".jpg>";
+    
+    }
+setInterval(nextImage, 5000);
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+<div id="description">
+Die neuen sieben Weltwunder ..
+</div>
+
+
+</div>
+
+<div class="coverletter">
+
+<strong>Sehr geehrte Damen und Herren,</strong><br>
+<p>
+  Mit mehr als einem Jahr Erfahrung als
+Software-Testerin habe ich Erfahrung in vielen Aufgabenbereichen. Insbesondere zaehlen folgende
+Eigenschaften zu meinen Staerken, welche wesentlich zu einem Erfolg in Ihrer Firma beitragen
+koennten:
+<br>
+ <br> Mit Auszeichnung bestandene Pruefung als Master of Computer Applications
+ <br> ISQTB Certification (Foundation level)
+  <br> Erfolgreich ausgefuehrt Softwaretests in Banken und Telekom-Projekten
+
+<br>Gute Kenntnisse und Erfahrung in MY SQL Server
+
+
+<br>
+<p>
+Meine Muttersprache ist Telugu, ich spreche aber fliessend Englisch und gutes Deutsch. Ich bin
+flexibel und sofort einsatzbereit. Ich bin ueberzeugt davon, dass ich Ihre Anforderungen erfuellen und mit viel leidenschaftlichem
+Engagement Ihre Erwartungen uebertreffen kann. Ueber eine positive Rueckmeldung und ein
+persoenliches Gespraech freue ich mich sehr. 
+</p>
+
+
+</div>
+<div class="mypic">
+<img src="https://scontent-ams3-1.xx.fbcdn.net/v/t1.0-9/36225541_1748627431895871_8492717311470338048_n.jpg?_nc_cat=0&oh=865bac6ce3bf674ff6fea9e26a9e976d&oe=5BD8870C">
+
+<p>NAME : DIVYA MALLINI <br>
+   DOB : 02.06.1987
+</p>
+
+
+<div class="full zoom" >
+
+
+<a href="#" class="fa fa-linkedin"></a>
+
+<a href="#" class="fa fa-skype"></a>
+<a href="#" class="fa fa-xing"></a>
+
+</div>
+
+
+</div>
+
+
+
+<div class="footer">
+<div class="adress">Hellinghaueser Weg 2A <br>
+59557 Lippstadt 
+Germany
+
+</div>
+<div class="phone">Phone : 017684943779 
+
+</div>
+<div class="email">Email : divya.mallini@gmx.de</div>
+
+
+
+</div>
+  </div>            
+</body>
+</html>
+
+
+
