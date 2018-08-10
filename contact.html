@@ -118,52 +118,33 @@ li a {
    
     
 }
-@keyframes box {
-  0 {
-    transform: translateX(-50%) translateY(-50%) rotate(0deg);
-  }
-  100% {
-    transform: translateX(-50%) translateY(-50%) rotate(360deg);
-  }
-}
+
+
 
 
 .rotate {
   color: black;
-  text-shadow: 0 20px 25px #2e2e31, 0 40px 60px #2e2e31;
-  font-size: 150%;
-  font-weight: bold;
+  
+  font-size: 200%;
+  
   text-decoration: none;
-  letter-spacing: -3px;
+  
   
   position: absolute;
-  top: 50%;
-  left: 9%;
-  transform: translateX(-50%) translateY(-50%);
+  top: 21%;
+  left: 2%;
+  
   
   
   
    
-    font-family: BallparkWeiner;
+    font-family: Times New Roman;
 
   
   
   
 }
 
-.rotate:before,
-.rotate:after {
-  content: '';
-  padding: .9em .4em;
-  position: absolute;
-  left: 50%;
-  width: 100%;
-  top: 50%;
-  display: block;
-  border: 3px solid #760001;
-  transform: translateX(-50%) translateY(-50%) rotate(0deg);
-  animation: 10s infinite alternate ease-in-out box;
-}
 
 
 .center { 
@@ -437,48 +418,16 @@ font-size: 120%;
 
 
 	<div id="box">
-    	<img src="https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/taj-mahal-tayseer-al-hamad.jpg">
+    	<img src="http://www.phil.uni-mannheim.de/Praxis%20&%20Beruf/bewerbung_cv.jpg">
         </div>
         
-        <button class="prew fa fa-chevron-left" onclick="prewImage()"></button>
-        <button class="next fa fa-chevron-right" onclick="nextImage()"></button>
+        
         
         
         
         </div>
 
 
-<script type="text/javascript">
-	var slider_content = document.getElementById('box');
-    var image=['https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/The_Monastery%2C_Petra%2C_Jordan8.jpg/1920px-The_Monastery%2C_Petra%2C_Jordan8', 
-    'http://muc1.framepool.com/shotimg/970887571-piazza-dei-miracoli-leaning-tower-of-pisa-santa-maria-assunta-romanesque',
-    'https://images.fineartamerica.com/images-medium-large/rome--colosseum-manolo-raggi',
-    'https://gazettereview.com/wp-content/uploads/2017/04/pyramids', 
-    'https://thumbs.dreamstime.com/b/corcovado-christus-der-erl%C3%B6ser-blaue-himmel-horizontal-32237350', 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Chichen-Itza-Castillo-Seen-From-East.JPG/1280px-Chichen-Itza-Castillo-Seen-From-East','https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/taj-mahal-tayseer-al-hamad'];
-	var i=image.length;
-   
-   function nextImage(){
-    	if (i<image.length){
-        i= i+1;
-        }else{
-        	i= 1;
-        }
-    	slider_content.innerHTML="<img src="+image[i-1]+".jpg>";
-    
-    }
-     function prewImage(){
-    	if (i<image.length+1 && i>1){
-        i= i-1;
-        }else{
-        	i= image.length;
-        }
-    	slider_content.innerHTML="<img src="+image[i-1]+".jpg>";
-    
-    }
-setInterval(nextImage, 5000);
-
-
-</script>
 
 
 
@@ -489,9 +438,7 @@ setInterval(nextImage, 5000);
 
 
 
-<div id="description">
-Seven Wonders of the World ..
-</div>
+
 <h3>GET IN TOUCH</h3>
 <p>I'd love to hear from you</p>
 
